@@ -7,33 +7,24 @@ List Schools: Fetches and sorts schools by proximity to provided coordinates.
 Tech Stack
 Node.js & Express.js: Backend framework.
 MySQL: Database for storing school data.
-Setup
+
 Clone the repo:
+    git clone https://github.com/your-username/school-management-api.git
+    cd school-management-api
 
-bash
-Copy code
-git clone https://github.com/your-username/school-management-api.git
-cd school-management-api
 Install dependencies:
-
-bash
-Copy code
-npm install
-Configure environment:
+    npm install
+    Configure environment:
 
 Create a .env file in the root directory with the following:
-plaintext
-Copy code
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=school_management
-PORT=3000
-Set up MySQL:
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASSWORD=
+    DB_NAME=school_management
+    PORT=3000
 
-Create the school_management database and schools table:
-sql
-Copy code
+
+Create the school_manageme    `nt database and schools table:
 CREATE TABLE schools (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -42,10 +33,8 @@ CREATE TABLE schools (
     longitude FLOAT NOT NULL
 );
 Run the server:
+    npm start
 
-bash
-Copy code
-npm start
-API Endpoints
-Add School: POST /api/schools/addSchool
-List Schools: GET /api/schools/listSchools?latitude={lat}&longitude={lon}
+API Endpoints:-
+    Add School: POST /api/schools/addSchool
+    List Schools: GET /api/schools/listSchools?latitude={lat}&longitude={lon}
